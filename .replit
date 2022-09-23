@@ -1,7 +1,7 @@
-compile = ["make", "-s"]
+compile = "make -s"
 run = "./main"
-entrypoint = "main.c"
-hidden = ["main", "main-debug", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
+entrypoint = "main.cpp"
+hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", ".ccls-cache"]
@@ -58,8 +58,8 @@ type = "cppdbg"
 
 [languages]
 
-[languages.c]
-pattern = "**/*.{c,h}"
+[languages.cpp]
+pattern = "**/*.{cpp,h}"
 
-[languages.c.languageServer]
+[languages.cpp.languageServer]
 start = "ccls"
